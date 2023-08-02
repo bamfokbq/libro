@@ -1,0 +1,23 @@
+@use '../styles/variables' as variables;
+@use '../styles/mixins' as mixin;
+
+.AboutPage {
+    background: variables.$primary-color;
+    height: variables.$full-screen;
+}
+
+.CardGrid {
+    @include mixin.card-grid;
+    width: 50vw;
+    margin: 10vh auto;
+}
+
+.Card {
+    @include mixin.card-styles;
+    @include mixin.shadow-styles;
+
+    h3 {
+        color: variables.$secondary-color;
+        font-size: variables.$title-font;
+    }
+}

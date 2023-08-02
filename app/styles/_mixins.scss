@@ -1,0 +1,19 @@
+@use './variables' as variables;
+
+@mixin card-styles {
+    border-radius: 15px;
+    background: white;
+    color: variables.$primary-color;
+    padding: calc(variables.$gap / 2);
+}
+
+@mixin shadow-styles {
+    box-shadow: 0px 10px 15px rgba($color: #02020227, $alpha: 0.5);
+}
+
+@mixin card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-auto-rows: fit-content;
+    gap: variables.$gap;
+}
